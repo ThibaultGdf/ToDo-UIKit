@@ -9,6 +9,7 @@ import Foundation
 
 // MARK: - Record
 struct Record: Codable {
-	let id, createdTime: String
+	let id: String
+	let createdTime: String
 	let fields: Fields
 }

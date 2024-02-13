@@ -9,7 +9,9 @@ import Foundation
 
 // MARK: - Fields
 struct Fields: Codable {
-	let priority, task, toDoBefore: String
+	let priority: String
+	let task: String
+	let toDoBefore: String
 
 	enum CodingKeys: String, CodingKey {
 		case priority = "Priority"
