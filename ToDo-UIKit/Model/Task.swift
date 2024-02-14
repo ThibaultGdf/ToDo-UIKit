@@ -11,3 +11,16 @@ import Foundation
 struct Task: Codable {
 	let records: [Record]
 }
+
+class TaskService {
+	func getTask() -> [Task] {
+		let tasks = [Task(
+			records: [Record(
+				id: "",
+				createdTime: "",
+				fields: Fields(priority: "", task: "", toDoBefore: "")
+			)]
+		)]
+		return tasks
+	}
+}

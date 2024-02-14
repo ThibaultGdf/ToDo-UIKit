@@ -20,6 +20,7 @@
 		D95435FC2B7B7F4700466231 /* DetailTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95435FB2B7B7F4700466231 /* DetailTaskViewController.swift */; };
 		D95435FE2B7B824700466231 /* DetailTaskView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95435FD2B7B824700466231 /* DetailTaskView.storyboard */; };
 		D95436052B7B82DF00466231 /* TaskListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95436042B7B82DF00466231 /* TaskListView.storyboard */; };
+		D95436072B7B843500466231 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95436062B7B843500466231 /* TaskListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		D95435FB2B7B7F4700466231 /* DetailTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskViewController.swift; sourceTree = "<group>"; };
 		D95435FD2B7B824700466231 /* DetailTaskView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailTaskView.storyboard; sourceTree = "<group>"; };
 		D95436042B7B82DF00466231 /* TaskListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskListView.storyboard; sourceTree = "<group>"; };
+		D95436062B7B843500466231 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,9 +72,9 @@
 		D95435C42B7B746100466231 /* ToDo-UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				D95435FF2B7B829C00466231 /* TaskList */,
-				D95435D92B7B748000466231 /* AddTask */,
-				D95435ED2B7B7B7600466231 /* DetailTask */,
+				D95436012B7B82B700466231 /* Model */,
+				D95436002B7B82B000466231 /* View */,
+				D95436022B7B82BA00466231 /* Presenter */,
 				D95435C52B7B746100466231 /* AppDelegate.swift */,
 				D95435C72B7B746100466231 /* SceneDelegate.swift */,
 				D95435CE2B7B746300466231 /* Assets.xcassets */,
@@ -85,9 +87,8 @@
 		D95435D92B7B748000466231 /* AddTask */ = {
 			isa = PBXGroup;
 			children = (
-				D95435EC2B7B7B0700466231 /* Model */,
-				D95435EB2B7B7B0500466231 /* View */,
-				D95435EA2B7B7AFC00466231 /* Presenter */,
+				D95435E72B7B7A4E00466231 /* ViewController */,
+				D95435CB2B7B746100466231 /* AddTaskView.storyboard */,
 			);
 			path = AddTask;
 			sourceTree = "<group>";
@@ -100,63 +101,13 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		D95435EA2B7B7AFC00466231 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				D95435E82B7B7A6100466231 /* AddTaskPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		D95435EB2B7B7B0500466231 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D95435E72B7B7A4E00466231 /* ViewController */,
-				D95435CB2B7B746100466231 /* AddTaskView.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		D95435EC2B7B7B0700466231 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				D95435F42B7B7BC100466231 /* Record.swift */,
-				D95435F62B7B7BC800466231 /* Fields.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		D95435ED2B7B7B7600466231 /* DetailTask */ = {
-			isa = PBXGroup;
-			children = (
-				D95435EE2B7B7B7E00466231 /* Model */,
-				D95435EF2B7B7B8000466231 /* View */,
-				D95435F02B7B7B8200466231 /* Presenter */,
-			);
-			path = DetailTask;
-			sourceTree = "<group>";
-		};
-		D95435EE2B7B7B7E00466231 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		D95435EF2B7B7B8000466231 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				D95435F82B7B7C3200466231 /* ViewController */,
 				D95435FD2B7B824700466231 /* DetailTaskView.storyboard */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		D95435F02B7B7B8200466231 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
+			path = DetailTask;
 			sourceTree = "<group>";
 		};
 		D95435F82B7B7C3200466231 /* ViewController */ = {
@@ -170,9 +121,8 @@
 		D95435FF2B7B829C00466231 /* TaskList */ = {
 			isa = PBXGroup;
 			children = (
-				D95436012B7B82B700466231 /* Model */,
-				D95436002B7B82B000466231 /* View */,
-				D95436022B7B82BA00466231 /* Presenter */,
+				D95436032B7B82D000466231 /* ViewController */,
+				D95436042B7B82DF00466231 /* TaskListView.storyboard */,
 			);
 			path = TaskList;
 			sourceTree = "<group>";
@@ -180,8 +130,9 @@
 		D95436002B7B82B000466231 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D95436032B7B82D000466231 /* ViewController */,
-				D95436042B7B82DF00466231 /* TaskListView.storyboard */,
+				D95435FF2B7B829C00466231 /* TaskList */,
+				D95435ED2B7B7B7600466231 /* DetailTask */,
+				D95435D92B7B748000466231 /* AddTask */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				D95435F22B7B7BBB00466231 /* Task.swift */,
+				D95435F42B7B7BC100466231 /* Record.swift */,
+				D95435F62B7B7BC800466231 /* Fields.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,6 +150,7 @@
 		D95436022B7B82BA00466231 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D95435E82B7B7A6100466231 /* AddTaskPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -204,6 +158,7 @@
 		D95436032B7B82D000466231 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D95436062B7B843500466231 /* TaskListViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -286,6 +241,7 @@
 				D95435E92B7B7A6100466231 /* AddTaskPresenter.swift in Sources */,
 				D95435F52B7B7BC100466231 /* Record.swift in Sources */,
 				D95435F32B7B7BBB00466231 /* Task.swift in Sources */,
+				D95436072B7B843500466231 /* TaskListViewController.swift in Sources */,
 				D95435F72B7B7BC800466231 /* Fields.swift in Sources */,
 				D95435C82B7B746100466231 /* SceneDelegate.swift in Sources */,
 				D95435FC2B7B7F4700466231 /* DetailTaskViewController.swift in Sources */,
