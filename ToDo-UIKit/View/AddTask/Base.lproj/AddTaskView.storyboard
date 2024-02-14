@@ -36,15 +36,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0P-0l-x1h">
-                                <rect key="frame" x="16" y="44" width="54" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="54" id="dxY-e8-hS6"/>
-                                    <constraint firstAttribute="height" constant="35" id="wfL-oU-GGr"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Edit"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -54,9 +45,8 @@
                             <constraint firstItem="NaZ-kb-cnq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="C7q-d5-Y0Z"/>
                             <constraint firstItem="JbN-x4-I1K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JUI-Vu-Gj6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JbN-x4-I1K" secondAttribute="trailing" constant="16" id="SKG-sE-Cji"/>
-                            <constraint firstItem="j0P-0l-x1h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TiJ-Fz-e5S"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NaZ-kb-cnq" secondAttribute="trailing" constant="16" id="krx-3Y-nW5"/>
-                            <constraint firstItem="j0P-0l-x1h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="q83-44-wsc"/>
+                            <constraint firstItem="NaZ-kb-cnq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rac-y1-oHX"/>
                         </constraints>
                     </view>
                     <connections>
