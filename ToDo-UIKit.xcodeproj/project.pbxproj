@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D942A1B72B7CD68900ED9936 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D942A1B62B7CD68900ED9936 /* CustomCell.swift */; };
 		D95435C62B7B746100466231 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95435C52B7B746100466231 /* AppDelegate.swift */; };
 		D95435C82B7B746100466231 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95435C72B7B746100466231 /* SceneDelegate.swift */; };
 		D95435CA2B7B746100466231 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95435C92B7B746100466231 /* AddTaskViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D942A1B62B7CD68900ED9936 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		D95435C22B7B746100466231 /* ToDo-UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo-UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95435C52B7B746100466231 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D95435C72B7B746100466231 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D942A1B52B7CD67800ED9936 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				D942A1B62B7CD68900ED9936 /* CustomCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
 		D95435B92B7B746100466231 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +131,7 @@
 		D95435FF2B7B829C00466231 /* TaskList */ = {
 			isa = PBXGroup;
 			children = (
+				D942A1B52B7CD67800ED9936 /* CustomCell */,
 				D95436032B7B82D000466231 /* ViewController */,
 				D95436042B7B82DF00466231 /* TaskListView.storyboard */,
 			);
@@ -238,6 +249,7 @@
 			files = (
 				D95435CA2B7B746100466231 /* AddTaskViewController.swift in Sources */,
 				D95435C62B7B746100466231 /* AppDelegate.swift in Sources */,
+				D942A1B72B7CD68900ED9936 /* CustomCell.swift in Sources */,
 				D95435E92B7B7A6100466231 /* AddTaskPresenter.swift in Sources */,
 				D95435F52B7B7BC100466231 /* Record.swift in Sources */,
 				D95435F32B7B7BBB00466231 /* Task.swift in Sources */,
@@ -401,7 +413,7 @@
 				INFOPLIST_FILE = "ToDo-UIKit/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = TaskListView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -429,7 +441,7 @@
 				INFOPLIST_FILE = "ToDo-UIKit/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = TaskListView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

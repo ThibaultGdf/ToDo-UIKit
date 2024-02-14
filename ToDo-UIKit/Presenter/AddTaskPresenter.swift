@@ -17,8 +17,9 @@ class Presenter {
 	}
 	
 	@objc func getData() {
-		let tasks = self.taskService.getTask()
-		view?.getData(data: tasks)
+		self.taskService.getTask { tasks in
+			self.view?.getData(data: tasks)
+		}
 	}
 }
 

@@ -19,13 +19,33 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Rdl-DF-ujQ">
                                 <rect key="frame" x="16" y="103" width="398" height="795"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hK9-lK-8SY">
-                                    <rect key="frame" x="0.0" y="0.0" width="398" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomCell" id="K01-qY-Rbf" customClass="CustomCell" customModule="ToDo_UIKit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="398" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K01-qY-Rbf" id="6eX-FB-jC1">
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ES-JZ-CcN">
+                                                    <rect key="frame" x="20" y="11.000000000000002" width="358" height="21.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7ES-JZ-CcN" firstAttribute="top" secondItem="6eX-FB-jC1" secondAttribute="topMargin" id="60k-Lp-wWo"/>
+                                                <constraint firstItem="7ES-JZ-CcN" firstAttribute="leading" secondItem="6eX-FB-jC1" secondAttribute="leadingMargin" id="Ipd-vB-d1U"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="7ES-JZ-CcN" secondAttribute="bottom" id="Vhh-c1-4uC"/>
+                                                <constraint firstItem="7ES-JZ-CcN" firstAttribute="trailing" secondItem="6eX-FB-jC1" secondAttribute="trailingMargin" id="bC1-ao-Ggn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="taskLabel" destination="7ES-JZ-CcN" id="NTB-Wz-lMS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tâches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3Z-YD-sPn">
                                 <rect key="frame" x="187.66666666666666" y="59" width="55" height="21"/>
@@ -55,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55.725190839694655" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="54.418604651162788" y="-2.5751072961373391"/>
         </scene>
     </scenes>
     <resources>

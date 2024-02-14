@@ -9,7 +9,5 @@ import Foundation
 
 // MARK: - Record
 struct Record: Codable {
-	let id: String
-	let createdTime: String
-	let fields: Fields
+	let records: [Task]
 }

@@ -7,7 +7,17 @@
 
 import UIKit
 
-class TaskListViewController: UIViewController, PresenterView {
+class TaskListViewController: UIViewController, PresenterView, UITableViewDelegate, UITableViewDataSource {
+
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return tasks.count
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let customCell: CustomCell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCell
+		customCell.taskLabel.text = tasks[indexPath.row].fields.task
+		return customCell
+	}
 	
 	var tasks: [Task] = []
 	
@@ -27,6 +37,8 @@ class TaskListViewController: UIViewController, PresenterView {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		self.tableView.dataSource = self
+		self.tableView.delegate = self
 		// Do any additional setup after loading the view.
 		presenter.getData()
 		self.tableView.reloadData()
