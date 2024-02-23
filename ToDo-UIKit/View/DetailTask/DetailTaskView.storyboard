@@ -11,17 +11,50 @@
         <!--Detail Task View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="DetailTaskViewController" customModule="ToDo_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailTaskViewController" id="Y6W-OH-hqX" customClass="DetailTaskViewController" customModule="ToDo_UIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PlM-12-atZ">
+                                <rect key="frame" x="16" y="290" width="361" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="qib-Fm-l2x">
+                                <rect key="frame" x="133" y="230" width="128" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="GkS-H2-A3u"/>
+                                    <constraint firstAttribute="height" constant="34" id="mxV-ap-uPN"/>
+                                </constraints>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Détail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOA-j7-lxh">
+                                <rect key="frame" x="16" y="177" width="361" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="wUv-pv-YhB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qib-Fm-l2x" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="8Fi-Oe-egs"/>
+                            <constraint firstItem="qib-Fm-l2x" firstAttribute="top" secondItem="FOA-j7-lxh" secondAttribute="bottom" constant="32" id="EbM-vj-lAf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FOA-j7-lxh" secondAttribute="trailing" constant="16" id="V9u-MC-MXP"/>
+                            <constraint firstItem="FOA-j7-lxh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="bJP-UD-rbT"/>
+                            <constraint firstItem="FOA-j7-lxh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="118" id="vFb-yz-I5O"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="qib-Fm-l2x" id="ke5-C2-3Sz"/>
+                        <outlet property="taskTitle" destination="FOA-j7-lxh" id="oyy-4e-wdm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="56" y="-2"/>
+            <point key="canvasLocation" x="55.725190839694655" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>

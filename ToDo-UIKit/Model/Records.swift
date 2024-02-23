@@ -7,9 +7,7 @@
 
 import Foundation
 
-// MARK: - Task
-struct Record: Codable {
-	let id: String
-	let createdTime: String
-	let fields: Fields
+// MARK: - Record
+struct Records: Codable {
+	let records: [Record]
 }

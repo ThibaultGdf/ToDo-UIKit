@@ -9,6 +9,15 @@ import UIKit
 
 class TaskListViewController: UIViewController, PresenterView, UITableViewDelegate, UITableViewDataSource {
 
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let storyboard = UIStoryboard(name: "DetailTaskView", bundle: nil)
+		guard let vc = storyboard.instantiateViewController(identifier: "DetailTaskViewController") as? DetailTaskViewController else { return }
+		
+		vc.task = tasks[indexPath.row]
+		self.navigationController?.pushViewController(vc, animated: true)
+
+	}
+	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return tasks.count
 	}
@@ -19,19 +28,19 @@ class TaskListViewController: UIViewController, PresenterView, UITableViewDelega
 		return customCell
 	}
 	
-	var tasks: [Task] = []
+	var tasks: [Record] = []
 	
-	func getData(data: [Task]) {
+	func getData(data: [Record]) {
 		self.tasks = data
 		self.tableView.reloadData()
 	}
 	
-	func updateList(with data: [Task]) {
+	func updateList(with data: [Record]) {
 		self.tableView.reloadData()
 	}
 	
 	
-	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet private weak var tableView: UITableView!
 	
 	lazy var presenter = Presenter(view: self)
 	
@@ -40,7 +49,7 @@ class TaskListViewController: UIViewController, PresenterView, UITableViewDelega
 		self.tableView.dataSource = self
 		self.tableView.delegate = self
 		// Do any additional setup after loading the view.
-		presenter.getData()
+//		presenter.getData()
 		self.tableView.reloadData()
 	}
 }

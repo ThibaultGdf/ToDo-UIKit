@@ -10,20 +10,23 @@ import Foundation
 class Presenter {
 	
 	let view: PresenterView?
-	let taskService: TaskService = TaskService()
+	let apiManager: APIManager = APIManager()
 	
 	init(view: PresenterView) {
 		self.view = view
 	}
 	
-	@objc func getData() {
-		self.taskService.getTask { tasks in
-			self.view?.getData(data: tasks)
+	@objc func getData() async throws {
+		do {
+			let task = try await self.apiManager.fetchData(model: [Record].self, path: "/To%20do")
+			self.view?.getData(data: task)
+		} catch {
+			throw error
 		}
 	}
 }
 
 protocol PresenterView: AnyObject {
-	func getData(data:[Task])
-	func updateList(with data: [Task])
+	func getData(data:[Record])
+	func updateList(with data: [Record])
 }

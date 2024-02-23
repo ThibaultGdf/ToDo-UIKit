@@ -8,13 +8,16 @@
 import UIKit
 
 class DetailTaskViewController: UIViewController {
-
-	@IBOutlet weak var task: UILabel!
+	
+	@IBOutlet weak var datePicker: UIDatePicker!
+	@IBOutlet weak var taskTitle: UILabel!
+	
+	var task: Record!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		taskTitle.text = task.fields.task
 		// Do any additional setup after loading the view.
 	}
-
-
 }
