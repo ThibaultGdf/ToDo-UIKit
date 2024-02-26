@@ -7,7 +7,8 @@
 
 import Foundation
 
-// MARK: - Record
+// MARK: - Records
 struct Records: Codable {
 	let records: [Record]
 }
+

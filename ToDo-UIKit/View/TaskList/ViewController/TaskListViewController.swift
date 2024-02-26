@@ -30,15 +30,16 @@ class TaskListViewController: UIViewController, PresenterView, UITableViewDelega
 	
 	var tasks: [Record] = []
 	
-	func getData(data: [Record]) {
-		self.tasks = data
+	@MainActor
+	func getData(data: Records) {
+		self.tasks = data.records
 		self.tableView.reloadData()
 	}
 	
+	@MainActor
 	func updateList(with data: [Record]) {
 		self.tableView.reloadData()
 	}
-	
 	
 	@IBOutlet private weak var tableView: UITableView!
 	
@@ -49,7 +50,7 @@ class TaskListViewController: UIViewController, PresenterView, UITableViewDelega
 		self.tableView.dataSource = self
 		self.tableView.delegate = self
 		// Do any additional setup after loading the view.
-//		presenter.getData()
+		presenter.getData()
 		self.tableView.reloadData()
 	}
 }

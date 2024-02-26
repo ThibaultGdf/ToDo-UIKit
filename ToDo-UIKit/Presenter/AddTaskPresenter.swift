@@ -16,17 +16,25 @@ class Presenter {
 		self.view = view
 	}
 	
-	@objc func getData() async throws {
-		do {
-			let task = try await self.apiManager.fetchData(model: [Record].self, path: "/To%20do")
-			self.view?.getData(data: task)
-		} catch {
-			throw error
+	func getData() {
+		Task {
+			do {
+				let task = try await self.apiManager.fetchData(model: Records.self)
+				Task { @MainActor in
+					self.view?.getData(data: task)
+				}
+			} catch {
+				fatalError("\(error)")
+			}
 		}
 	}
 }
 
 protocol PresenterView: AnyObject {
-	func getData(data:[Record])
+	
+	@MainActor
+	func getData(data: Records)
+	
+	@MainActor
 	func updateList(with data: [Record])
 }
