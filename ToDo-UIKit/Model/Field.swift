@@ -11,11 +11,11 @@ import Foundation
 struct Field: Codable {
 	let priority: String
 	let task: String
-	//let toDoBefore: String
+	let toDoBefore: String
 
 	enum CodingKeys: String, CodingKey {
 		case priority = "Priority"
 		case task = "Task"
-		//case toDoBefore = "To do before"
+		case toDoBefore = "To do before"
 	}
 }

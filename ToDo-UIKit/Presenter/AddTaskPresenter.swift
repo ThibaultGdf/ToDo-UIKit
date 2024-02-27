@@ -24,9 +24,16 @@ class Presenter {
 					self.view?.getData(data: task)
 				}
 			} catch {
-				fatalError("\(error)")
+				print(error)
 			}
 		}
+	}
+	
+//	MARK: - TO DO
+	func postData(
+		
+	) {
+
 	}
 }
 
