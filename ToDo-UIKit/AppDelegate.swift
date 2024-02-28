@@ -18,6 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 #if DEBUG
 		NFX.sharedInstance().start()
 #endif
+		
+		_ = PersistenceController.shared
+		
+		print("App directory: \(URL(fileURLWithPath: NSHomeDirectory()))")
+
+
+		
 		return true
 	}
 

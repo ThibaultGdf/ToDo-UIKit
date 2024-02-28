@@ -12,12 +12,12 @@ class DetailTaskViewController: UIViewController {
 	@IBOutlet weak var datePicker: UIDatePicker!
 	@IBOutlet weak var taskTitle: UILabel!
 	
-	var task: Record!
+	var task: DBRecord!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		taskTitle.text = task.fields.task
+		taskTitle.text = task.r_fields?.a_task
 		// Do any additional setup after loading the view.
 	}
 }

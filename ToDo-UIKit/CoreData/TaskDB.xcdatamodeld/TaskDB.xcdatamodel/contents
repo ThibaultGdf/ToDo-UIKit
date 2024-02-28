@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23D60" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="DBField" representedClassName="DBField" syncable="YES" codeGenerationType="class">
+        <attribute name="a_id" optional="YES" attributeType="String"/>
+        <attribute name="a_priority" optional="YES" attributeType="String"/>
+        <attribute name="a_task" optional="YES" attributeType="String"/>
+        <attribute name="a_toDoBefore" optional="YES" attributeType="String"/>
+        <relationship name="r_record" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="DBRecord" inverseName="r_fields" inverseEntity="DBRecord"/>
+    </entity>
+    <entity name="DBRecord" representedClassName="DBRecord" syncable="YES" codeGenerationType="class">
+        <attribute name="a_createdTime" optional="YES" attributeType="String"/>
+        <attribute name="a_id" optional="YES" attributeType="String"/>
+        <relationship name="r_fields" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="DBField" inverseName="r_record" inverseEntity="DBField"/>
+    </entity>
+</model>

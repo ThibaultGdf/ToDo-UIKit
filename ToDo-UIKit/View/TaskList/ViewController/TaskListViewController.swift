@@ -8,8 +8,6 @@
 import UIKit
 
 class TaskListViewController: UIViewController, PresenterView, UITableViewDelegate, UITableViewDataSource {
-
-	@IBOutlet weak var addButton: UIButton!
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let storyboard = UIStoryboard(name: "DetailTaskView", bundle: nil)
@@ -26,7 +24,7 @@ class TaskListViewController: UIViewController, PresenterView, UITableViewDelega
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let customCell: CustomCell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCell
-		customCell.taskLabel.text = tasks[indexPath.row].fields.task
+		customCell.taskLabel.text = tasks[indexPath.row].r_fields?.a_task
 		return customCell
 	}
 	
@@ -37,16 +35,16 @@ class TaskListViewController: UIViewController, PresenterView, UITableViewDelega
 		present(navigationController, animated: true, completion: nil)
 	}
 	
-	var tasks: [Record] = []
+	var tasks: [DBRecord] = []
 	
 	@MainActor
-	func getData(data: Records) {
-		self.tasks = data.records
+	func getData(data: [DBRecord]) {
+		self.tasks = data
 		self.tableView.reloadData()
 	}
 	
 	@MainActor
-	func updateList(with data: [Record]) {
+	func updateList(with data: [DBRecord]) {
 		self.tableView.reloadData()
 	}
 	
